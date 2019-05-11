@@ -1,0 +1,937 @@
+<!--
+	作者：Sariay
+	时间：2018-09-25
+	描述：There may be a bug, but don't worry, QiLing(器灵) says that it can work normally!
+-->
+<!DOCTYPE html>
+<html class="html-loading">
+		
+
+<head><meta name="generator" content="Hexo 3.8.0">
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
+    
+      Java修饰符 | Hexo
+    
+  </title>
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content>
+  <meta name="description" content>
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/Annie.css">
+  
+  <!-- jquery -->
+	<script src="/js/jquery.min.js"></script>
+
+  <!-- leancloud -->
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script src="/js/leancloud.js"></script>
+</head>
+	<body>
+		<!-- Preloader -->
+
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+						
+		</div>
+	</div>
+
+
+<!-- header -->
+<header class="fixbackground" data-img-mode="normal" data-normal-src="/img/1.jpg" data-random-max="110" data-random-src="https://sariay.github.io/Random-img/">
+	<div class="mask">
+		<!-- Logo and navigation -->
+		<div class="h-header">
+			<div id="logo">
+				<a href="/">
+						
+						<img src="/img/logo.png" alt="Logo">
+					
+				</a>
+			</div>
+			
+			<div id="navigation-show">
+				<ul>
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home">主页</a>
+		</li>
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive">归档</a>
+		</li>
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories">分类</a>
+		</li>
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags">标签</a>
+		</li>
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about">关于</a>
+		</li>
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery">相册</a>
+		</li>
+	
+
+	
+</ul>
+			</div>				
+		</div>
+
+		<!-- motto -->
+		<div class="h-body">	
+			
+				<p class="motto"></p>
+			
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<a href="javascript:;" id="read-more"><i class="fa fa-angle-double-down" aria-hidden="true"></i>
+			</a>
+
+			
+				<!-- 
+	This is only a demo, please go to "https://time.is" to set your city time! 
+-->
+<style type="text/css">
+	.header-date {
+		font-size: 1.6rem;
+		color: #fff;
+		position: absolute;
+		bottom: 5px;
+		right: 1rem;
+		writing-mode: tb-rl;
+	}	
+	
+	.header-date a {
+		border-bottom: none;
+	}
+
+	@media only screen and (max-width: 768 ) {
+		.header-date {
+			font-size: 1rem;
+		}			
+	}
+</style>
+<div class="header-date">
+	<a href="https://time.is/Beijing" id="time_is_link" rel="nofollow"></a>
+	<span id="Beijing_z43d"></span>
+</div>
+<script src="//widget.time.is/zh.js"></script>
+<script>
+	time_is_widget.init({
+		Beijing_z43d:{
+			template:"DATE", 
+			date_format:"year年 monthname dnum日"
+		}
+	});
+</script>
+			
+		</div>
+	</div>
+</header>
+
+<div id="navigation-hide">
+	<!-- Progress bar -->
+	<div id="progress-bar"></div>
+
+	<!-- Progress percent -->
+	<div id="progress-percentage"><h1>0.0%</h1></div>
+
+	<div class="toc-switch"><span class="switch-button">目录</span></div>
+
+	<!-- Page title -->
+	<p>
+		
+			当前文章&nbsp;:&nbsp;《Java修饰符》
+		
+	</p>
+
+	<!-- Nav trigger for navigation-H-->
+	<a class="nav-trigger"><span></span></a>
+</div>
+
+<!-- Navigation in div(id="navigation-H") -->
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<h3>Navigation</h3>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	<div class="nav-body">
+		<ul>
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home">主页</a>
+		</li>
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive">归档</a>
+		</li>
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories">分类</a>
+		</li>
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags">标签</a>
+		</li>
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about">关于</a>
+		</li>
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery">相册</a>
+		</li>
+	
+
+	
+</ul>
+	</div>
+	<div class="nav-footer">
+		<ul>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-github"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-weibo"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-pinterest"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-instagram"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-twitter"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<i class="fa fa-rss"></i>
+			</a>
+		</li>
+			
+</ul>
+
+	</div>
+</nav>
+			
+		<!--main-->
+		<main>
+			<!--
+	时间：2018-11-17
+	描述：
+		插件名称：katelog.min.js
+		插件作者：KELEN
+		插件来源: https://github.com/KELEN/katelog
+-->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+			</div>
+		</div>
+
+		
+		<script src="/plugin/toc/katelog.min.js"></script>
+
+		
+	 
+
+<div class="layout-post">
+	<div id="layout-post">
+	<div class="article-title">
+		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+		
+	<a href="/2017/04/15/modifier/" itemprop="url">
+		Java修饰符
+	</a>
+
+	</div>
+
+	<div class="article-meta">
+		<span>
+			<i class="fa fa-calendar"></i>
+			
+
+
+	发布于
+
+	<a href="/2017/04/15/modifier/" itemprop="url">
+		<time datetime="2017-04-15T06:22:00.000Z" itemprop="datePublished">
+	  		2017-04-15
+	  </time>
+	</a>
+	&nbsp;
+
+
+
+
+
+			
+
+
+
+
+	更新于
+
+	<a href="/2017/04/15/modifier/" itemprop="url">
+		<time datetime="2017-04-15T06:22:00.000Z" itemprop="dateUpdated">
+	  		2017-09-17
+	  </time>
+	</a> 
+
+
+
+		</span>
+		<span>
+			<i class="fa fa-tags"></i>
+			
+	
+		<a href="/tags/Java/" class=" ">
+			Java
+		</a>
+	
+		
+		</span>
+		
+		
+
+
+
+	</div>
+
+	<div class="article-content" id="article-content">
+		<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>Java提供了很多的修饰符，修饰符用于描述类/方法/变量的一些属性，主要分为两类</p>
+<ul>
+<li>访问修饰符</li>
+<li>非访问修饰符</li>
+</ul>
+<h1 id="访问修饰符"><a href="#访问修饰符" class="headerlink" title="访问修饰符"></a>访问修饰符</h1><p>用于描述该类/方法/变量的被访问的权限，关键字有四个，权限范围如下：</p>
+<table>
+<thead>
+<tr>
+<th>修饰符</th>
+<th>包外</th>
+<th>子类</th>
+<th>包内</th>
+<th>类内</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>public</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>protected</td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>default</td>
+<td></td>
+<td></td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>private</td>
+<td></td>
+<td></td>
+<td></td>
+<td>√</td>
+</tr>
+</tbody>
+</table>
+<h2 id="public（公有访问修饰符）"><a href="#public（公有访问修饰符）" class="headerlink" title="public（公有访问修饰符）"></a>public（公有访问修饰符）</h2><p>被声明为 public 的类、方法、构造方法和接口能够被任何其他类访问。<br>如果几个相互访问的 public 类分布在不同的包中，则需要导入相应 public 类所在的包。由于类的继承性，类所有的公有方法和变量都能被其子类继承。<br>++Java 程序的 main() 方法必须设置成公有的，否则，Java 解释器将不能运行该类。++</p>
+<h2 id="protected（受保护的访问修饰符）"><a href="#protected（受保护的访问修饰符）" class="headerlink" title="protected（受保护的访问修饰符）"></a>protected（受保护的访问修饰符）</h2><p>被声明为 protected 的变量、方法和构造器能被<strong>同一个包</strong>中的任何其他类访问，也能够被<strong>不同包中的子类</strong>访问。<br>protected 访问修饰符<strong>不能修饰类和接口</strong>，方法和成员变量能够声明为 protected，但是<strong>接口的成员变量和成员方法不能声明为 protected</strong>。<br>子类能访问 protected 修饰符声明的方法和变量，这样就能避免不相关的类使用这些方法和变量。  </p>
+<h2 id="不使用任何关键字（默认访问修饰符）"><a href="#不使用任何关键字（默认访问修饰符）" class="headerlink" title="不使用任何关键字（默认访问修饰符）"></a>不使用任何关键字（默认访问修饰符）</h2><p>使用默认访问修饰符声明的变量和方法，对同一个包内的类是可见的。<strong>接口里的变量都隐式声明为public static final，接口里的方法默认情况下访问权限为public</strong>。</p>
+<h2 id="private（私有访问修饰符）"><a href="#private（私有访问修饰符）" class="headerlink" title="private（私有访问修饰符）"></a>private（私有访问修饰符）</h2><p>私有访问修饰符是最严格的访问级别，所以被声明为 private 的方法、<strong>变量和构造方法只能被所属类访问</strong>，并且<strong>类和接口不能声明为 private</strong>。<br>声明为私有访问类型的变量只能通过类中公共的 getter 方法被外部类访问。<br>Private 访问修饰符的使用主要用来隐藏类的实现细节和保护类的数据。  </p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>子类的类/方法/变量的权限修饰符的范围不能比父类的小</p>
+<ul>
+<li>父类中声明为 public 的方法在子类中也必须为 public。</li>
+<li>父类中声明为 protected 的方法在子类中要么声明为 protected，要么声明为 public，不能声明为 private。</li>
+<li>父类中声明为 private 的方法，不能够被继承。</li>
+</ul>
+<p>如下图，b类中的A方法范围比a类中的A方法访问权限范围更大<br><img src="http://olwt21mf4.bkt.clouddn.com/17-4-15/84824545-file_1492238954686_d9a4.png" alt><br>如下图，如果b类中的A方法的修饰符改为private，那么就会报错<br><img src="http://olwt21mf4.bkt.clouddn.com/17-4-15/69705924-file_1492239061720_337b.png" alt>  </p>
+<h1 id="非访问修饰符"><a href="#非访问修饰符" class="headerlink" title="非访问修饰符"></a>非访问修饰符</h1><p>为了实现一些其他的功能，Java 也提供了许多非访问修饰符。</p>
+<ul>
+<li><strong>static</strong> 修饰符，用来创建类方法和类变量。</li>
+<li><strong>final</strong> 修饰符，用来修饰类、方法和变量，final 修饰的类不能够被继承，修饰的方法不能被继承类重新定义，修饰的变量为常量，是不可修改的。</li>
+<li><strong>abstract</strong> 修饰符，用来创建抽象类和抽象方法。</li>
+<li><strong>synchronized</strong> 和 <strong>volatile</strong> 修饰符，主要用于线程的编程。</li>
+</ul>
+<h2 id="static"><a href="#static" class="headerlink" title="static"></a>static</h2><p>被static修饰的类/方法/变量不属于类的实例，属于类本身</p>
+<ul>
+<li>静态变量：<br>static关键字用来声明独立于对象的静态变量，无论一个类实例化多少对象，它的静态变量只有一份拷贝。 静态变量也被称为类变量。局部变量不能被声明为 static变量。</li>
+<li>静态方法：<br>static关键字用来声明独立于对象的静态方法。静态方法不能使用类的非静态变量。静态方法从参数列表得到数据，然后计算这些数据。</li>
+</ul>
+<p>对类变量和方法的访问可以直接使用 classname.variablename 和 classname.methodname 的方式访问。<br>如下图，main方法中可以直接访问静态变量<code>s</code>和静态方法<code>print()</code>：<br><img src="http://olwt21mf4.bkt.clouddn.com/17-4-15/4876772-file_1492239938570_72fa.png" alt><br>事实上通过类名来访问该类中的静态变量之外，事实上类的实例也可以调用，如下图的写法也是正确的，尽管Java会给一个警告，因为Java不倡导大家这样使用：<br><img src="http://olwt21mf4.bkt.clouddn.com/17-4-15/12099555-file_1492239938679_29f1.png" alt>  </p>
+<h2 id="final"><a href="#final" class="headerlink" title="final"></a>final</h2><p>final可以修饰类/方法/变量，具体规则如下</p>
+<h3 id="final-变量"><a href="#final-变量" class="headerlink" title="final 变量"></a>final 变量</h3><p>final 变量能被显式地初始化并且只能初始化一次。被声明为 final 的对象的引用不能指向不同的对象。但是 final 对象里的数据可以被改变。也就是说 <strong>final 对象的引用不能改变，但是里面的值可以改变</strong>。<br><strong>举例</strong><br>当我们试图更改final变量的值时候，Java会报错<br><img src="http://olwt21mf4.bkt.clouddn.com/17-4-15/17188853-file_1492240334960_175d.png" alt><br>同样的，接下来的这个例子也会报错<br><img src="http://olwt21mf4.bkt.clouddn.com/17-4-15/90587236-file_1492240694369_5f2f.png" alt><br>但是对<code>value</code>中的值可以随意改变<br><img src="http://olwt21mf4.bkt.clouddn.com/17-4-15/90165029-file_1492240764709_15c5c.png" alt><br>final 修饰符通常和 static 修饰符一起使用来创建类常量。</p>
+<h3 id="final-方法"><a href="#final-方法" class="headerlink" title="final 方法"></a>final 方法</h3><p>类中的 final 方法可以被子类继承，但是不能被子类修改。<br>声明 final 方法的主要目的是防止该方法的内容被修改。<br>如下图，a类中的<code>final A()</code>方法可以被b类继承<br><img src="http://olwt21mf4.bkt.clouddn.com/17-4-15/52182757-file_1492241013395_1415b.png" alt><br>但是当我们试图在b类中重写<code>final A()</code>时候，Java会报错<br><img src="http://olwt21mf4.bkt.clouddn.com/17-4-15/78514708-file_1492241101451_12105.png" alt>  </p>
+<h3 id="final-类"><a href="#final-类" class="headerlink" title="final 类"></a>final 类</h3><p>final 类不能被继承，没有类能够继承 final 类的任何特性。</p>
+<h2 id="abstract"><a href="#abstract" class="headerlink" title="abstract"></a>abstract</h2><h3 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h3><ul>
+<li>抽象类不能用来实例化对象，声明<strong>抽象类的唯一目的是为了将来对该类进行扩充</strong>。  </li>
+<li><strong>一个类不能同时被 abstract 和 final 修饰</strong>。<strong>如果一个类包含抽象方法，那么该类一定要声明为抽象类</strong>，否则将出现编译错误。  </li>
+<li><strong>抽象类可以包含抽象方法和非抽象方法</strong>。  <h3 id="抽象方法"><a href="#抽象方法" class="headerlink" title="抽象方法"></a>抽象方法</h3></li>
+<li>抽象方法是一种没有任何实现的方法，该方法的的具体实现由子类提供。  </li>
+<li><strong>抽象方法不能被声明成 final 和 static</strong>。  </li>
+<li>任何继承抽象类的<strong>子类必须实现父类的所有抽象方法</strong>，<strong>除非该子类也是抽象类</strong>。  </li>
+<li>如果一个类包含若干个抽象方法，那么该类必须声明为抽象类。<strong>抽象类可以不包含抽象方法</strong>。  </li>
+<li>抽象方法的声明以分号结尾，例如：public abstract sample();。  </li>
+</ul>
+<h2 id="synchronized"><a href="#synchronized" class="headerlink" title="synchronized"></a>synchronized</h2><p>synchronized 关键字声明的方法同一时间只能被一个线程访问。synchronized 修饰符可以应用于四个访问修饰符。</p>
+<h2 id="transient"><a href="#transient" class="headerlink" title="transient"></a>transient</h2><p>序列化的对象包含被 transient 修饰的实例变量时，java 虚拟机(JVM)跳过该特定的变量。<br>该修饰符包含在定义变量的语句中，用来预处理类和变量的数据类型。</p>
+<h2 id="volatile"><a href="#volatile" class="headerlink" title="volatile"></a>volatile</h2><p>volatile 修饰的成员变量在每次被线程访问时，都强制从共享内存中重新读取该成员变量的值。而且，当成员变量发生变化时，会强制线程将变化值回写到共享内存。这样在任何时刻，<strong>两个不同的线程总是看到某个成员变量的同一个值</strong>。<br><strong>一个 volatile 对象引用可能是 null</strong>。</p>
+<h2 id="native"><a href="#native" class="headerlink" title="native"></a>native</h2><p>使用native关键字说明这个方法是原生函数，也就是这个方法是用C/C++语言实现的，并且被编译成了DLL，由java去调用。 这些函数的实现体在DLL中，JDK的源代码中并不包含，你应该是看不到的。对于不同的平台它们也是不同的。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="http://www.runoob.com/java/java-modifier-types.html" target="_blank" rel="noopener">Java 修饰符 | 菜鸟教程</a></p>
+	
+	</div>
+	
+	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+
+	<!-- relate post, comment...-->
+	<div class="investment-container">
+		<div class="investment-header">
+			<div class="investment-title-1">
+				<div class="on">相关文章</div>
+				<div>评论</div>
+				<div>分享</div>
+			</div>
+			<div class="investment-title-2">	            
+				
+	<span>
+		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
+		
+			<a href="/2017/09/21/java-face/" title="Java面试题集锦" rel="prev">
+				&laquo;上一篇
+			</a>
+		
+		
+			<a href="/2016/11/25/bubble-sort/" title="算法之冒泡排序" rel="next">
+				下一篇&raquo;
+			</a>
+			
+	</span>
+
+
+      		
+			</div>	
+		</div>
+		
+		<div class="investment-content">
+			<div class="investment-content-list">
+				
+
+<div class="relate-post">
+	
+		<ul>
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2017/09/21/java-face/" title="Java面试题集锦">
+								Java面试题集锦			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 21日, 2017				
+							</p>
+							<p class="relate-post-content">
+								Java基础什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？Java虚拟机是一个可以执行Java字节码的虚拟机进程。Java源文件被编译成能被Java虚拟机执行的字节码文件。Java被设计成允许应用程序可以运行在任...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2017/09/21/java-face/" title="Java面试题集锦">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="Java面试题集锦">
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2016/07/14/singleton/" title="设计模式之单例模式">
+								设计模式之单例模式			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								七月 14日, 2016				
+							</p>
+							<p class="relate-post-content">
+								单例模式作用保证一个类只有一个实例，并且提供一个访问该实例的全局访问入口。
+常用场景
+Windows的任务管理器，很熟悉吧，不信自己试试看。
+Web项目中读取配置文件的对象，一般也应用单例模式，因为配置文件是共享的资源。
+Window...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2016/07/14/singleton/" title="设计模式之单例模式">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="设计模式之单例模式">
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/05/05/hello-world/" title="Hello World">
+								Hello World			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								五月 5日, 2019				
+							</p>
+							<p class="relate-post-content">
+								Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using ...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/05/05/hello-world/" title="Hello World">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="Hello World">
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2016/11/25/bubble-sort/" title="算法之冒泡排序">
+								算法之冒泡排序			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十一月 25日, 2016				
+							</p>
+							<p class="relate-post-content">
+								概念冒泡排序是一种简单的排序算法，它重复的走访过要排序的数列，将一个数列从大到小或者从小到大排序，一次比较两个元素。如果他们的顺序错误，就把他们交换过来。走访数列的工作是重复地进行直到没有需要交换的元素，也就是说该数列已经排序完成。
+...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2016/11/25/bubble-sort/" title="算法之冒泡排序">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="算法之冒泡排序">
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2015/10/31/operator-two/" title="C++ 运算符重载II">
+								C++ 运算符重载II			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2015				
+							</p>
+							<p class="relate-post-content">
+								本例在上一例的基础上增加重载-=和*=的成员函数.12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2015/10/31/operator-two/" title="C++ 运算符重载II">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="C++ 运算符重载II">
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2015/10/31/operator/" title="C++ 运算符重载">
+								C++ 运算符重载			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 31日, 2015				
+							</p>
+							<p class="relate-post-content">
+								本例为实现复数运算，定义一个复数类，其中私有成员变量有两个，实数部real和虚数部image，通过运算符重载实现复数的直接相加减。1234567891011121314151617181920212223242526272829303...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2015/10/31/operator/" title="C++ 运算符重载">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="C++ 运算符重载">
+							</a>
+						</div>
+					</li>											
+			
+			
+		</ul>
+	
+</div>	
+			</div>
+			<div class="investment-content-list">
+				<div class="layout-comment">
+
+	
+
+		
+
+			<!-- I don't know !!!-->
+			<div>Please check the comment setting in config.yml of hexo-theme-Annie!</div>
+			
+		
+		
+	
+
+</div>
+			</div>
+			<div class="investment-content-list">
+				<div class="layout-share">
+	
+	
+
+		
+			
+			<!-- socialShare share -->
+			<div class="social-share"></div>
+
+<!--  css & js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+			
+		
+		
+	
+</div>
+
+
+			</div>
+		</div>	
+	</div>
+	</div>
+</div>
+
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+	
+
+
+<!-- show math formula -->
+
+
+
+	 
+	<script src="/plugin/clipboard/clipboard.js"></script>
+	<script>
+		// Copy code !
+	    function codePreprocessing() {
+	        $("#article-content .highlight").each(function() {
+
+	            $(this).wrap('<div id="post-code"></div>');
+
+	        })
+
+	        $("#article-content #post-code").each(function() {
+
+	            $(this).prepend('<nav class="copy-nav"><span><i class="code-language"></i></span></nav>');
+
+	        })
+
+	        $("#article-content .copy-nav").each(function() {
+	            var temp = $(this).next().attr('class'),
+	                language = ((temp.length > 9) && (temp != null)) ? temp.substr(10) : "none"; //why 9? Need to check language?
+
+	            $(this).find('.code-language').text(language);
+
+	            $(this).append('<span class="copy-btn"><i class="fa fa-copy" aria-hidden="true"></i></span>');
+
+	        });
+	    }
+
+		function codeCopy() {
+		    $('#article-content #post-code').each(function(i) {
+		        var codeCopyId = 'codeCopy-' + i;
+
+		        var codeNode = $(this).find('.code'),
+		            copyButton = $(this).find('.copy-btn');
+
+		        codeNode.attr('id', codeCopyId);
+		        copyButton.attr('data-clipboard-target-id', codeCopyId);
+		    })
+
+		    
+			var clipboard = new ClipboardJS('.copy-btn', {
+					target: function(trigger) {
+						return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+					}
+		      	});
+
+			//pure js
+			function showTooltip(elem, msg) {		   
+				elem.setAttribute('aria-label', msg);
+				elem.setAttribute('class', 'copy-btn copy-status');
+				setTimeout(function() {
+					elem.setAttribute('class', 'copy-btn');
+				}, 2000);
+			}
+
+			clipboard.on('success', function(e) {
+			    e.clearSelection();
+			    console.info('Action:', e.action);		   
+			    console.info('Trigger:', e.trigger);
+			    showTooltip(e.trigger, 'Copied!');
+			    
+			});
+			clipboard.on('error', function(e) {
+			    console.error('Action:', e.action);
+			    console.error('Trigger:', e.trigger);
+			});
+		
+
+		}
+
+		if ($('.layout-post').length) {
+		    codePreprocessing();
+		    codeCopy();
+		} 
+	</script>
+
+
+
+
+
+<link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+<script src="/plugin/fancybox/jquery.fancybox.js"></script>
+
+<script type="text/javascript">
+	var titleID = $('.article-title a'),
+		imageID = $('.article-content img'),
+		videoID = $('.article-content video');
+
+	var postTitle = titleID.text() ? titleID.text() : "No post title!";
+
+	imageID.each(function() {
+		var imgPath = $(this).attr('src'),
+			imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+
+		//给每个匹配的<img>元素打包, 即添加父元素<a>
+		$(this).wrap('<a data-fancybox="gallery" data-caption=" 《 ' + postTitle + ' 》 ' + imgTitle + ' "  href=" ' + imgPath + ' "> </a>');
+	});
+
+	videoID.each(function() {
+		var videoPath = $(this).attr('src');
+
+		//给每个匹配的<img>元素打包, 即添加父元素<a>
+		$(this).wrap('<a data-fancybox href=" ' + videoPath + ' "> </a>');
+	});
+	//TODO：支持html5 video
+
+	if($('#layout-post').length) {
+		$('[data-fancybox="gallery"]').fancybox({
+			loop: true,
+			buttons: [
+				"zoom",
+				"share",
+				"slideShow",
+				"fullScreen",
+				//"download",
+				"thumbs",
+				"close"
+			],
+			protect: false
+		});
+	}
+</script>
+		</main>
+
+		<!--footer-->
+		<footer>
+	<div class="social">
+		<ul>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-github"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-weibo"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-pinterest"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-instagram"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-twitter"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<i class="fa fa-rss"></i>
+			</a>
+		</li>
+			
+</ul>
+
+	</div>
+		
+	<div class="copyright">
+		<p>
+			 
+				&copy;2017 - 2019, content by John Doe. All Rights Reserved.
+			
+			
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+		
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+
+		<span id="busuanzi_container_page_pv">
+	  		本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+		</span>
+
+	
+
+
+
+
+		</p>
+		<p>
+			<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.
+			<a href="javascript:zh_tran('s');" class="zh_click" id="zh_click_s">简体</a> 
+			<a href="javascript:zh_tran('t');" class="zh_click" id="zh_click_t">繁體</a>				
+		</p>
+	</div>		
+</footer>
+		
+	<!-- set '1' to show motto in all pages! -->
+
+	<script src="/plugin/motto/motto.js"></script>
+	
+	<script type="text/javascript">
+		$(".motto").html( getMingYanContent() );
+	</script>	
+
+
+
+
+
+<!-- love effect -->
+
+	<script src="/plugin/love/love.js"></script>
+
+
+<!-- back to top -->
+
+	
+	<div id="totop">
+  		<a href="javascript:;" name="TOTOP" class="fa fa-arrow-up"></a>
+	</div>
+
+
+
+
+<!-- site analysis -->
+
+
+	<!-- site-analysis -->
+	
+	
+	
+	
+	
+ 
+
+<script src="/plugin/vibrant/vibrant.js"></script>
+<script src="/plugin/chinese/chinese.js"></script>
+<script src="/plugin/imgLazyLoader/yall.min.js"></script>
+<script src="/plugin/imgResize/jquery.resizeimagetoparent.min.js"></script>
+<script src="/plugin/nicescroll/jquery.nicescroll.js"></script>
+<script src="/js/resizediv.js"></script>
+<script src="/js/main.js"></script>
+	</body>	
+</html>
